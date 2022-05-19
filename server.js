@@ -1,4 +1,4 @@
-// require dependencies 
+// require dependencies (check line 2)
 // const { Router } = require('express');
 const express = require('express');
 const fs = require('fs');
@@ -15,12 +15,12 @@ app.use(express.urlencoded({ extended: true }));
 // setup static folder
 app.use(express.static('public'));
 
-// GET Route for homepage
+// GET Route for index.html
 app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
-// GET Route for notes page
+// GET Route for notes.html
 app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
@@ -54,7 +54,7 @@ app.delete('/api/notes/:id', (req, res) => {
     fs.readFile('./db/db.json', 'utf-8', (err, data) => {
         if (err) throw err;
         let noteData = JSON.parse(id);
-        const deletedNote = req.params.title;
+        const deletedNote = req.params.id;
         noteData = noteData.filter(note => note.id !== deletedNote);
         fs.writeFile('./db/db.json', JSON.stringify(noteData), (err, data) => {
             if (err) throw err;
