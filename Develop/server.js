@@ -15,14 +15,15 @@ app.use(express.urlencoded({ extended: true }));
 // setup static folder
 app.use(express.static('public'));
 
-// html routes (in progress)
-app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "/public/index.html"));
-});
+// GET Route for homepage
+app.get('/', (req, res) =>
+  res.sendFile(path.join(__dirname, '/public/index.html'))
+);
 
-app.get("/public/notes.html", function (req, res) {
-    res.sendFile(path.join(__dirname, "/public/notes.html"));
-});
+// GET Route for notes page
+app.get('/notes', (req, res) =>
+  res.sendFile(path.join(__dirname, '/public/notes.html'))
+);
 
 // GET route ()
 app.get('/api/notes', (req, res) => {
