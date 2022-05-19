@@ -15,14 +15,15 @@ SO THAT I can organize my thoughts and keep track of tasks I need to complete
 
 This application requires installation 
 
-A sample HTML page can be found here: https://matthewestes33.github.io/notetaker/
+A sample HTML page can be found here: https://matthewestes33.github.io/expressnotetaker/
 
-All elements of the project can be examined here: https://github.com/notetaker/teamprofilegen/
+All elements of the project can be examined here: https://github.com/matthewestes33/expressnotetaker
 
 ## Credits
 
 Referenced documentation and tutorials:
 
+Express 5.x - API Reference: https://expressjs.com/en/5x/api.html
 
 
 ## Features
