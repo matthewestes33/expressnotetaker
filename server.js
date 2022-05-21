@@ -1,8 +1,7 @@
 // require dependencies (check line 2)
-// const { Router } = require('express');
 const express = require('express');
 const fs = require('fs');
-const path = require("path");
+const path = require('path');
 
 // initialize the app and create a port
 const app = express();
@@ -25,7 +24,7 @@ app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 
-// GET route ()
+// GET route 
 app.get('/api/notes', (req, res) => {
     fs.readFile('./db/db.json', 'utf-8', (err, data) => {
         if (err) throw err;
@@ -49,16 +48,17 @@ app.post('/api/notes', (req, res) => {
     });
 });
 
-// DELETE route (works better)
+// DELETE route: DELETE /api/notes/:id should receive a query parameter that contains the id of a note to delete. 
+// To delete a note: read all notes from db.json, remove note with given id property, and rewrite notes to db.json.
 app.delete('/api/notes/:id', (req, res) => {
     fs.readFile('./db/db.json', 'utf-8', (err, data) => {
         if (err) throw err;
-        let noteData = JSON.parse(id);
+        const idData = JSON.parse(data);
         const deletedNote = req.params.id;
-        noteData = noteData.filter(note => note.id !== deletedNote);
-        fs.writeFile('./db/db.json', JSON.stringify(noteData), (err, data) => {
+        idData.filter(data => data.id !== deletedNote);
+        fs.writeFile('./db/db.json', JSON.stringify(idData), (err, data) => {
             if (err) throw err;
-            res.json(noteData);
+            res.json(idData);
         })
     });
 });

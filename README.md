@@ -22,6 +22,7 @@ Referenced documentation and tutorials:
 
 Express 5.x - API Reference: https://expressjs.com/en/5x/api.html
 
+Deploying Node.js Apps on Heroku: https://devcenter.heroku.com/articles/deploying-nodejs 
 
 ## Features
 
