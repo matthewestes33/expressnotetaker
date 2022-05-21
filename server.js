@@ -5,7 +5,7 @@ const path = require('path');
 
 // initialize the app and create a port
 const app = express();
-const PORT = process.env.port || 3001;
+const PORT = process.env.port || 5000;
 
 // setup middleware for parsing JSON and urlencoded form data
 app.use(express.json());
