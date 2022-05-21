@@ -14,7 +14,7 @@ This application allows the user to write and save notes in order to better orga
 
 This application requires installation 
 
-A sample HTML page can be found here: INSERT HEROKUAPP LINK
+A sample HTML page can be found here: https://hidden-thicket-17673.herokuapp.com/
 
 All elements of the project can be examined here: https://github.com/matthewestes33/expressnotetaker
 
