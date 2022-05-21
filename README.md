@@ -6,13 +6,15 @@ This application allows the user to write and save notes in order to better orga
 
 ## Mock-up
 
-![Note Taker.](./images/notetaker.jpg)
+![Index.](./images/index.jpg)
+
+![Notes.](./images/notes.jpg)
 
 ## Installation
 
 This application requires installation 
 
-A sample HTML page can be found here: https://matthewestes33.github.io/expressnotetaker/
+A sample HTML page can be found here: INSERT HEROKUAPP LINK
 
 All elements of the project can be examined here: https://github.com/matthewestes33/expressnotetaker
 

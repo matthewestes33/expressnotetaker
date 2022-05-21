@@ -1,14 +1,22 @@
 {
-  "name": "note-taker",
+  "name": "expressnotetaker",
   "version": "1.0.0",
-  "description": "",
+  "description": "homework-11",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "express",
+    "note",
+    "taker"
+  ],
+  "author": "Matthew Estes",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.16.4"
+  },
+  "engines": {
+    "node": "16.14.2"
   }
 }
