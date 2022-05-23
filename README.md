@@ -10,6 +10,8 @@ This application allows the user to write and save notes in order to better orga
 
 ![Notes.](./images/notes.jpg)
 
+![Heroku Log.](./images/heroku-log.jpg)
+
 ## Installation
 
 This application requires installation 
