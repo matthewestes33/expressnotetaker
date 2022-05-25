@@ -52,13 +52,15 @@ app.post('/api/notes', (req, res) => {
 });
 
 // DELETE route: DELETE /api/notes/:id should receive a query parameter that contains the id of a note to delete. 
-// To delete a note: read all notes from db.json, remove note with given id property, and rewrite notes to db.json.
 app.delete('/api/notes/:id', (req, res) => {
+    // To delete a note: read all notes from db.json
     fs.readFile('./db/db.json', 'utf-8', (err, data) => {
         if (err) throw err;
+        // remove note with given id property
         const idData = JSON.parse(data);
-        const deletedNote = req.params.id;
+        const deletedNote = req.body.id;
         idData.filter(data => data.id !== deletedNote);
+        // rewrite notes to db.json
         fs.writeFile('./db/db.json', JSON.stringify(idData), (err, data) => {
             if (err) throw err;
             res.json(idData);
