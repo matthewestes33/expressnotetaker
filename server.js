@@ -1,7 +1,8 @@
-// require dependencies (check line 2)
+// require npm dependencies 
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const { v4: uuidv4 } = require('uuid');
 
 // initialize the app and create a port (Heroku requires PORT to be capitalized)
 const app = express();
@@ -38,7 +39,8 @@ app.get('/api/notes', (req, res) => {
 app.post('/api/notes', (req, res) => {
     fs.readFile('./db/db.json', 'utf-8', (err, data) => {
         if (err) throw err;
-        const id = data[data.length - 1].id + 1;
+        let id = req.body.id = uuidv4();
+        console.log(data)
         const newNote = { title: req.body.title, text: req.body.text, id: id };
         const noteData = JSON.parse(data);
         noteData.push(newNote);
