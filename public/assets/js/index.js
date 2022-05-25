@@ -1,4 +1,3 @@
-let noteID;
 let noteTitle;
 let noteText;
 let saveNoteBtn;
@@ -55,17 +54,13 @@ const renderActiveNote = () => {
   hide(saveNoteBtn);
 
   if (activeNote.id) {
-    noteID.setAttribute('readonly', true);
     noteTitle.setAttribute('readonly', true);
     noteText.setAttribute('readonly', true);
-    noteID.value = activeNote.id;
     noteTitle.value = activeNote.title;
     noteText.value = activeNote.text;
   } else {
-    noteID.removeAttribute('readonly');
     noteTitle.removeAttribute('readonly');
     noteText.removeAttribute('readonly');
-    noteID.value = '';
     noteTitle.value = '';
     noteText.value = '';
   }
@@ -73,7 +68,6 @@ const renderActiveNote = () => {
 
 const handleNoteSave = () => {
   const newNote = {
-    id: noteID,value,
     title: noteTitle.value,
     text: noteText.value,
   };
