@@ -28,6 +28,12 @@ Express 5.x - API Reference: https://expressjs.com/en/5x/api.html
 
 Deploying Node.js Apps on Heroku: https://devcenter.heroku.com/articles/deploying-nodejs 
 
+uuid - npm: https://www.npmjs.com/package/uuid
+
+Additional assistance:
+
+Thank you to my instructional staff, weekly tutor, and AskBCS Learning Assistants!
+
 ## Features
 
 When the Note Taker app is opened, the user is presented with a landing page with a link to a notes page.
